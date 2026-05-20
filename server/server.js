@@ -14,7 +14,10 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "careerpilot-e6icz9jse-faisal-45s-projects.vercel.app",
+  credentials: true,
+}));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
