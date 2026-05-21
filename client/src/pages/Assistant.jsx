@@ -26,11 +26,11 @@ function Assistant() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/assistant/chat",
-        {
-          message,
-        }
-      );
+  `${import.meta.env.VITE_API_URL}/api/assistant/chat`,
+  {
+    message,
+  }
+);
 
       const aiMessage = {
         role: "assistant",
