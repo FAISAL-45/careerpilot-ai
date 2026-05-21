@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_URL =
-  `${import.meta.env.VITE_API_URL}/api/auth`;
+  `${import.meta.env.VITE_API_URL}/api/ai`;
 
 export const analyzeResume = async (
   file,
@@ -21,7 +21,8 @@ export const analyzeResume = async (
   const config = {
     headers: {
       Authorization: `Bearer ${userInfo.token}`,
-      "Content-Type": "multipart/form-data",
+      "Content-Type":
+        "multipart/form-data",
     },
   };
 
